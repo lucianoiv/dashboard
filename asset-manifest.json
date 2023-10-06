@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dashboard/static/css/main.8aa15853.css",
-    "main.js": "/dashboard/static/js/main.22167e8a.js",
+    "main.js": "/dashboard/static/js/main.5e915a27.js",
     "static/js/787.545aecf5.chunk.js": "/dashboard/static/js/787.545aecf5.chunk.js",
     "static/media/weathericons-regular-webfont.svg": "/dashboard/static/media/weathericons-regular-webfont.1341a15172cec8dae06e.svg",
     "static/media/weathericons-regular-webfont.eot": "/dashboard/static/media/weathericons-regular-webfont.bb2ec001c20cf752f852.eot",
@@ -10,11 +10,11 @@
     "static/media/weathericons-regular-webfont.woff2": "/dashboard/static/media/weathericons-regular-webfont.e218aee6928fe3da9ed6.woff2",
     "index.html": "/dashboard/index.html",
     "main.8aa15853.css.map": "/dashboard/static/css/main.8aa15853.css.map",
-    "main.22167e8a.js.map": "/dashboard/static/js/main.22167e8a.js.map",
+    "main.5e915a27.js.map": "/dashboard/static/js/main.5e915a27.js.map",
     "787.545aecf5.chunk.js.map": "/dashboard/static/js/787.545aecf5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8aa15853.css",
-    "static/js/main.22167e8a.js"
+    "static/js/main.5e915a27.js"
   ]
 }
