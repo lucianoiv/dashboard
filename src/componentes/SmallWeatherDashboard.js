@@ -9,7 +9,7 @@ export const SmallWeatherDashboard = () => {
         </h1>
         <h2 className='ciudad'>Catamarca</h2>
         <section className='main_temp'>
-          <img src='https://picsum.photos/100' alt='imagen'></img>
+          <img src='https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg' alt='imagen'></img>
           <h2 className='data'><strong>32</strong>°C</h2>
         </section>
         
