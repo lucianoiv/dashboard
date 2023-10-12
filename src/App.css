@@ -2,8 +2,8 @@
   --btn-color: #4395D7;
   --data-color: #cdcfd1;
   --text-color: #818b99;
-  --background-data: #5b657159;
-  --background-colour: #222C3A;
+  --background-data: #f0f0f0;
+  --background-colour: #0d0c11;
 }
 
 html{
@@ -11,7 +11,7 @@ html{
 }
 
 *{
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 /*.App {
@@ -23,7 +23,7 @@ html{
 
 .weather_api,
 .transport_api{
-  border: solid 2px #4395D7;
+  
   margin: 1rem;
   width: 90%;
   height: 100%;
@@ -46,6 +46,11 @@ html{
   justify-content: center;
 }
 
+.highlights p{
+  display: inline-block;
+  margin: 0 auto;
+}
+
 .main_temp{
   background-color: var(--background-data);
   display: grid;
@@ -58,7 +63,7 @@ html{
 }
 
 .wrapper{
-  border: solid 2px #4395D7;
+  
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: minmax(10rem, 20rem); /**/
@@ -74,7 +79,7 @@ html{
 }
 
 .section_second{
-  border: solid 2px #4395D7;
+  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
@@ -88,12 +93,12 @@ html{
 }
 
 .section_second div{
-  border: solid 2px #4395D7;
+  
   background-color: var(--background-data);
 }
 
 .temperature{
-  border: solid 2px #4395D7;
+  
   background-color: var(--background-data);
   justify-content: center;
   text-align: center;
@@ -106,12 +111,16 @@ html{
 }
 
 .min_max{
-  border: solid 2px #4395D7;
+  
   background-color: var(--background-data);
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   text-align: center;
+  & h2{
+    display: inline-block;
+    margin: 0 auto;
+  }
 }
 
 .App-logo {

@@ -4,6 +4,7 @@ import { TempDay } from './TempDay'
 import { HourTemp } from './HourTemp'
 import { Highlights } from './Highlights'
 
+
 export const MainWeather = () => {
 
 
@@ -12,9 +13,7 @@ export const MainWeather = () => {
   return (
     <div>
         <div className='wrapper'>
-            
-            <TempDay/>
-            
+              <TempDay/>
             <section className='section_second'>
                 <HourTemp/>
                 <Highlights/>

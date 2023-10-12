@@ -1297,4 +1297,25 @@ function p_1() {
 
 }
 
+function p_2(){
+    const hourly = data.hourly.time.length;
+    console.log(hourly)
+}
+
+function p_3() {
+    console.log(data.hourly.time[3] + " " + data.hourly.temperature_2m[3])
+}
+
+function p_4() {
+    console.log(data.hourly.windspeed_10m[72])
+}
+
+function p_5(){
+    console.log(data.daily.sunrise[2])
+}
+
 p_1()
+p_2()
+p_3()
+p_4()
+p_5()
