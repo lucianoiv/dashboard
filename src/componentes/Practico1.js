@@ -11,7 +11,7 @@ export const data ={
         "windspeed": 24.3,
         "winddirection": 165,
         "weathercode": 80,
-        "is_day": false,
+        "is_day": 0,
         "time": "2023-10-03T14:45"
     },
     "hourly_units": {

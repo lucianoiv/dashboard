@@ -4,9 +4,9 @@ import { Line } from 'react-chartjs-2';
 import { data } from './Practico1'
 
 
-export const HourTemp = () => {
+export const HourTemp = ({weather}) => {
 
-const hourly_temp = data.hourly.temperature_2m; //array de temperatura
+const hourly_temp = weather.hourly.temperature_2m; //array de temperatura
 
 
   const chart = {

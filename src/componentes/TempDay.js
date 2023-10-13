@@ -1,12 +1,15 @@
 import React from 'react'
 import { data } from './Practico1'
 
-export const TempDay = () => {
 
-const current_temp = data.current_weather.temperature
-const min_temp = data.daily.temperature_2m_min[0];
-const max_temp = data.daily.temperature_2m_max[0];
+export const TempDay = ({weather}) => {
 
+let current_temp = weather.current.temperature_2m;
+let min_temp = weather.daily.temperature_2m_min[0];
+let max_temp = weather.daily.temperature_2m_max[0];
+
+console.log(weather);
+console.log(weather.current.temperature_2m);
 
   return (
     <section className='section_first'>

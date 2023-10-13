@@ -1,20 +1,20 @@
 import React from 'react'
 import { data } from './Practico1'
 
-export const Highlights = () => {
+export const Highlights = ({weather}) => {
 
-    const wind_speed = data.current_weather.windspeed
-    const precipitation = data.hourly.precipitation_probability[0]
-    const sunrise_time = data.daily.sunrise[0].slice(11,16);
-    const sunset_time = data.daily.sunset[0].slice(11,16);
-    const uv_index = data.daily.uv_index_max[0];
-    const visibility = data.hourly.visibility[0];
+    const wind_speed = weather.current.windspeed_10m;
+    const precipitation = weather.hourly.precipitation_probability[0];
+    const sunrise_time = weather.daily.sunrise[0].slice(11,16);
+    const sunset_time = weather.daily.sunset[0].slice(11,16);
+    const uv_index = weather.daily.uv_index_max[0];
+    const visibility = (weather.hourly.visibility[0] / 1000);
 
     let isday;
     let text_isday;
     
 
-    if (data.current_weather.is_day){
+    if (weather.current.is_day !== 0){
         isday = 'https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg'
         text_isday = 'DIA'
     } else {
@@ -44,7 +44,7 @@ export const Highlights = () => {
         </div>
         <div className='highlights'>
         <img src='https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/rainbow-clear.svg' style={{width:50, heigth:50}} alt='icon'></img>
-            <p>VISIBILIDAD <strong>{visibility}</strong>M</p>
+            <p>VISIBILIDAD <strong>{visibility}</strong> Km</p>
         </div>
         <div className='highlights'>
         <img src={isday} style={{width:50, heigth:50}} alt='icon'></img>

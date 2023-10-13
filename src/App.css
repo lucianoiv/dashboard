@@ -8,10 +8,18 @@
 
 html{
   background-color: var(--background-colour);
+
 }
 
 *{
   border-radius: 10px;
+}
+
+.loading,
+img{
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
 }
 
 /*.App {
@@ -23,7 +31,6 @@ html{
 
 .weather_api,
 .transport_api{
-  
   margin: 1rem;
   width: 90%;
   height: 100%;
@@ -62,8 +69,7 @@ html{
   }
 }
 
-.wrapper{
-  
+.wrapper{  
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: minmax(10rem, 20rem); /**/
