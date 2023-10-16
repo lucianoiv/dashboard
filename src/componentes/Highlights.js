@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
 
+export const Highlights = (props) => {
 
-export const Highlights = ({weather}) => {
+    const wind_speed = props.weather.current.windspeed_10m;
+    const precipitation = props.weather.hourly.precipitation_probability[0];
+    const sunrise_time = props.weather.daily.sunrise[0].slice(11,16);
+    const sunset_time = props.weather.daily.sunset[0].slice(11,16);
+    const uv_index = props.weather.daily.uv_index_max[0];
+    const aire = props.aire.hourly.pm10[0];
 
-    const wind_speed = weather.current.windspeed_10m;
-    const precipitation = weather.hourly.precipitation_probability[0];
-    const sunrise_time = weather.daily.sunrise[0].slice(11,16);
-    const sunset_time = weather.daily.sunset[0].slice(11,16);
-    const uv_index = weather.daily.uv_index_max[0];
-    const visibility = (weather.hourly.visibility[0] / 1000);
+    
+    //const visibility = (weather.hourly.visibility[0] / 1000);
 
     let isday;
     let text_isday;
@@ -27,7 +29,7 @@ export const Highlights = ({weather}) => {
     };
     
 
-    if (weather.current.is_day !== 0){
+    if (props.weather.current.is_day !== 0){
         isday = 'https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg'
         text_isday = 'DIA'
     } else {
@@ -56,8 +58,8 @@ export const Highlights = ({weather}) => {
             <p>HUMEDAD <strong>{precipitation}</strong>%</p>
         </div>
         <div className='highlights'>
-        <img src='https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/rainbow-clear.svg' style={{width:50, heigth:50}} alt='icon'></img>
-            <p>VISIBILIDAD <strong>{visibility}</strong> Km</p>
+        <img src='https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/pollen.svg' style={{width:50, heigth:50}} alt='icon'></img>
+            <p>Calidad del aire: <strong>{aire}</strong></p>
         </div>
         <div className='highlights'>
         <img src={isday} style={{width:50, heigth:50}} alt='icon'></img>
