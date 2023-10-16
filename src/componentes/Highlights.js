@@ -1,5 +1,5 @@
 import React from 'react'
-import { data } from './Practico1'
+
 
 export const Highlights = ({weather}) => {
 
@@ -12,6 +12,19 @@ export const Highlights = ({weather}) => {
 
     let isday;
     let text_isday;
+    let indiceUV;
+
+    if (uv_index <= 2.9){
+        indiceUV = 'Bajo'
+    } else if (uv_index >= 3 || uv_index <= 5.9){
+        indiceUV = 'Moderado'
+    } else if (uv_index >= 6 || uv_index <= 7.9){
+        indiceUV = 'Alto'
+    } else if (uv_index >= 8 || uv_index <= 10.9){
+        indiceUV = 'Muy Alto'
+    } else if (uv_index >= 11){
+        indiceUV = 'Extremo'
+    };
     
 
     if (weather.current.is_day !== 0){
@@ -26,7 +39,7 @@ export const Highlights = ({weather}) => {
     <>
         <div className='highlights'>
         <img src='https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/uv-index.svg' style={{width:50, heigth:50}} alt='icon'></img>
-            <p >INDICE UV <strong>{uv_index}</strong></p>
+            <p >Max. UV hoy: <strong>{indiceUV}</strong></p>
         </div>
         <div className='highlights'>
         <img src='https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/wind.svg' style={{width:50, heigth:50}} alt='icon'></img>

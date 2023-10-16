@@ -1,5 +1,5 @@
 :root{
-  --btn-color: #4395D7;
+  --btn-color: #0a8bf5;
   --data-color: #cdcfd1;
   --text-color: #818b99;
   --background-data: #f0f0f0;
@@ -8,11 +8,31 @@
 
 html{
   background-color: var(--background-colour);
-
 }
 
 *{
   border-radius: 10px;
+}
+
+.boton_elegir{
+  background-color: var(--btn-color);
+  padding: 0 5%;
+  align-items: center;
+  font-weight: 600;
+  color: var(--background-data)
+}
+
+.ciudad{
+  align-content: stretch;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  padding: 5%;
+  & img{
+    border-radius: 50%
+  }
+  & img:hover{
+    transform: scale(150%);
+  }
 }
 
 .loading,
@@ -73,7 +93,7 @@ img{
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: minmax(10rem, 20rem); /**/
-  margin: 1rem;
+  margin: 5px;
 }
 
 .section_first{
@@ -108,10 +128,15 @@ img{
   background-color: var(--background-data);
   justify-content: center;
   text-align: center;
-  & h2, img, h4{
+  & h1, h2, img, h4{
     display: inline-block;
-    margin: 0;
-  } 
+    margin: 0 auto;
+    padding: 5px 0px;
+    font-size: x-large;
+  }
+  & h2{
+    font-size: 4rem;
+  }
 
 
 }

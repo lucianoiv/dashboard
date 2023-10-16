@@ -1,7 +1,6 @@
 import React from 'react'
 import { Chart as ChartJS} from 'chart.js/auto'; //importar auto para que funcione
 import { Line } from 'react-chartjs-2';
-import { data } from './Practico1'
 
 
 export const HourTemp = ({weather}) => {
@@ -15,8 +14,8 @@ const hourly_temp = weather.hourly.temperature_2m; //array de temperatura
       {
         label: 'Pronóstico por Hora',
         data: hourly_temp, //eje vertical, datos
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        borderColor: '#0a8bf5',
+        backgroundColor: '#0a8bf5',
         
       },
     ],
