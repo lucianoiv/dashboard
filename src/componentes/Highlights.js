@@ -7,14 +7,28 @@ export const Highlights = (props) => {
     const sunrise_time = props.weather.daily.sunrise[0].slice(11,16);
     const sunset_time = props.weather.daily.sunset[0].slice(11,16);
     const uv_index = props.weather.daily.uv_index_max[0];
-    const aire = props.aire.hourly.pm10[0];
-
-    
-    //const visibility = (weather.hourly.visibility[0] / 1000);
+    const currentTime = props.weather.current.time.slice(11,13);
+    const aire = props.aire.hourly.pm10[currentTime];
 
     let isday;
     let text_isday;
     let indiceUV;
+    let airQualityIndex;
+
+    if (aire <= 20){
+        airQualityIndex = 'Buena';        
+    } else if (aire <= 40){
+        airQualityIndex = 'Regular';
+    } else if (aire <= 50){
+        airQualityIndex = 'Mala';
+    } else if (aire <= 100){
+        airQualityIndex = 'Muy Mala'
+    } else if (aire > 100){
+        airQualityIndex = 'Dañina'
+    }
+    
+    //const visibility = (weather.hourly.visibility[0] / 1000);
+    
 
     if (uv_index <= 2.9){
         indiceUV = 'Bajo'
@@ -54,12 +68,12 @@ export const Highlights = (props) => {
             <p>ANOCHECER <strong>{sunset_time}</strong></p>
         </div>
         <div className='highlights'>
-        <img src='https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/humidity.svg' style={{width:50, heigth:50}} alt='icon'></img>
+        <img src='https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/humidity.svg' style={{width:50}} alt='icon'></img>
             <p>HUMEDAD <strong>{precipitation}</strong>%</p>
         </div>
         <div className='highlights'>
-        <img src='https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/pollen.svg' style={{width:50, heigth:50}} alt='icon'></img>
-            <p>Calidad del aire: <strong>{aire}</strong></p>
+        <img src='https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/pollen.svg' style={{width:40}} alt='icon'></img>
+            <p>Calidad del aire: <strong>{airQualityIndex}</strong></p>
         </div>
         <div className='highlights'>
         <img src={isday} style={{width:50, heigth:50}} alt='icon'></img>

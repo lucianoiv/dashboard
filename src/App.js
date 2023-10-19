@@ -36,6 +36,7 @@ const elegirCiudad = (eleccion) => {
       <input type='button' value='CAMBIAR CIUDAD' onClick={()=>setElegir(true)} className='boton_elegir'></input>
       <MainWeather elegir={ciudad} nombre={name} aire={calidadAire}/></>}
     </div>
+    
   );
 }
 

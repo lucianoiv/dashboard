@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export const TempDay = (props) => {
 
 let current_temp = props.weather.current.temperature_2m;
@@ -9,10 +8,6 @@ let max_temp = props.weather.daily.temperature_2m_max[0];
 let currentTime = props.weather.current.time.split("T");
 let current_date = currentTime[0].split("-");
 let date = current_date.reverse();
-
-
-
-
 
   return (
     <section className='section_first'>

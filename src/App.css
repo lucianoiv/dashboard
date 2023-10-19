@@ -89,10 +89,24 @@ img{
   }
 }
 
+#map { 
+  height: 350px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
 .wrapper{  
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: minmax(10rem, 20rem); /**/
+  margin: 5px;
+}
+
+.wrapper_transporte{  
+  
+  height: 100%;
+  width: 100%;
   margin: 5px;
 }
 
