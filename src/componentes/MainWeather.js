@@ -3,7 +3,8 @@ import { TempDay } from './TempDay'
 import { HourTemp } from './HourTemp'
 import { Highlights } from './Highlights'
 import { useEffect, useState } from 'react';
-import {MapContainer, TileLayer, Popup, Marker} from 'react-leaflet'
+
+import { Transporte } from './Transporte';
 
 export const MainWeather = (props) => {
 
@@ -33,7 +34,7 @@ export const MainWeather = (props) => {
     
   const weather = weatherData;
   const calidadAire = airQuality;
-console.log(weather)
+//console.log(weather)
 
 
   return (
@@ -47,18 +48,7 @@ console.log(weather)
             </section>
         </div> : <div className='loading'><img src='https://i.gifer.com/ZKZg.gif' alt='loading'></img></div>}
         
-        <div id="map">
-        <MapContainer center={[-34.6131, -58.3772]} zoom={13} scrollWheelZoom={false}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
-        <Marker Marker position={[-34.6131, -58.3772]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-        </MapContainer>
-        </div>
+                <Transporte/>
 
     </div>
   )
