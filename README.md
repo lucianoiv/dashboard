@@ -2,6 +2,14 @@
 
 ENTREGA FINAL <br> [https://lucianoiv.github.io/dashboard/](https://lucianoiv.github.io/dashboard/)<br>
 
+## Actualizacion 2/11
+
+ERROR 500 al cambiar de linea de colectivo. Usando el dropdown para ver la posicion del vehiculo especifico al hacer los cambios, **algunas veces** muestra un ERROR 500, y otras veces la API devuelve un objeto vacio por lo que React muestra un error en las variables.
+Resalto **algunas veces** porque efectivamente, al elegir la misma opcion en diferentes ocasiones, los errores son distintos.
+Posiblemente se deba a un error del codigo que no logro encontrar.
+___
+
+
 Esta App del Clima fue creada con React durante el curso Argentina Programa extrayendo informacion desde una API del clima [open-meteo.com](https://open-meteo.com/en/docs).
 
 El uso de la misma es muy simple, al cargar la app se ven tres imagenes de algunas ciudades de Argentina, el usuario puede elegir una y ver la temperatura en tiempo real además de la variacion de temperatura del día, entre otras cosas.<br>
