@@ -2,6 +2,14 @@
 
 ENTREGA FINAL <br> [https://lucianoiv.github.io/dashboard/](https://lucianoiv.github.io/dashboard/)<br>
 
+## Actualizacion 3/11
+
+Pude solucionar el error al no encontrarse disponible el servidor. Ahora si no encuentra datos o la API no devuelve datos, la app no crashea. El dropdown esta listo, falta el detall de borrar los numeros que se repiten. Sigo encontrando un error ocasional 
+
+{error: 'Hazelcast instance is not active! (com.hazelcast.core.HazelcastInstanceNotActiveException).', message: null}
+-
+A pesar de eso, la pagina si funciona, pero la API devuelva errores muy seguido, y es dificil darse cuenta si es la API o es el codigo lo que esta mal.
+
 ## Actualizacion 2/11
 
 ERROR 500 al cambiar de linea de colectivo. Usando el dropdown para ver la posicion del vehiculo especifico al hacer los cambios, **algunas veces** muestra un ERROR 500, y otras veces la API devuelve un objeto vacio por lo que React muestra un error en las variables.
