@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
 import { DatosTransporte } from './DatosTransporte.js'
 import { useEffect, useState } from "react";
 
-export const Transporte = () => {
+export const Transporte = (props) => {
 
   const [transporte, setTransporte] = useState(null);
   const [linea, setLinea] = useState("1467");
@@ -60,12 +60,12 @@ export const Transporte = () => {
 
 
   return (
-    <>
+    <div id={props.mode}>
       <label htmlFor="linea">LINEA:</label>
       <select id="linea" onChange={HandleSelect}>
-        {Lista.map(e => <option value={e.route_id}>{e.route_id}</option>)}
+        {Lista.map(e => <option value={e.route_id}>{e.route_short_name}</option>)}
       </select>
-      <p className="linea">{linea}</p>
+      {/* <p className="linea">{linea}</p> */}
       <div id="map">
         
           <MapContainer
@@ -99,7 +99,7 @@ export const Transporte = () => {
         
            
       </div>
-    </>
+    </div>
   );
 };
 
@@ -114,3 +114,26 @@ export const Transporte = () => {
 //           <>{[item["trip_headsign"]]}</>
 //           <br></br>
 //           <>Línea: {[item["route_short_name"]]}</>
+// -------------------------------------------------------------------------------------
+// 
+// SELECT
+// 
+// function App() {
+//   const [selectedOption, setSelectedOption] = useState(null);
+ 
+//   return (
+//      <div className="App">
+//        <Select
+//          name="colors"
+//          options={options}
+//          onChange={setSelectedOption}
+//          isMulti
+//        />
+//  {selectedOption && (
+//          <p>Selected color(s): {selectedOption.map(item => item.label).join(', ')}</p>
+//        )}
+//      </div>
+//   );
+//  }
+ 
+//  export default App;

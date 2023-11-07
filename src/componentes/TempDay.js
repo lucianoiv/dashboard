@@ -13,7 +13,7 @@ let date = current_date.reverse();
     <section className='section_first'>
         <div className='temperature'>
             <h1>{date.join("-")} {currentTime[1]}</h1><br></br>
-            <h1>{props.name}</h1><br></br>
+            <h4>{props.name}, {props.country}</h4><br></br>
             <h2><strong>{current_temp}</strong>°C</h2>
             
         </div>

@@ -10,6 +10,8 @@ export const MainWeather = (props) => {
 
   const [weatherData, setweather] = useState(null);
   const [airQuality, setAirQuality] = useState(null);
+  // const [isDay, setIsDay] = useState(2);
+  const [mode, setMode] = useState('')
 
   const ciudad = props.elegir;
   const airQualityURL = props.aire;
@@ -19,7 +21,9 @@ export const MainWeather = (props) => {
     fetch(ciudad)
     .then( resp => resp.json())
     .then( data => {
-      setweather(data);})
+      setweather(data);
+      setMode('mode'+data.current.is_day);
+    })
     .catch( ex => { console.error(ex);})
   }, [ciudad])
 
@@ -34,21 +38,20 @@ export const MainWeather = (props) => {
     
   const weather = weatherData;
   const calidadAire = airQuality;
-//console.log(weather)
 
 
   return (
     <div>{weather !== null && airQuality !== null?
-        <div className='wrapper'>
+        <div id={mode} className='wrapper'>
         
-              <TempDay weather={weather} name={props.nombre}/>
+              <TempDay weather={weather} name={props.nombre} country={props.country}/>
             <section className='section_second'>
                 <HourTemp weather={weather}/>
                 <Highlights weather={weather} aire={calidadAire}/>
             </section>
         </div> : <div className='loading'><img src='https://i.gifer.com/ZKZg.gif' alt='loading'></img></div>}
         
-                <Transporte/>
+                <Transporte mode={mode}/>
 
     </div>
   )

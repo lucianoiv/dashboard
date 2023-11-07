@@ -173,18 +173,26 @@ img{
   color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#mode1{
+  background-color: rgb(255, 255, 0)
 }
 
-@media (prefers-reduced-motion: no-preference) {
+#mode2{
+  background-color: #0d0c11;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.App-header {
+/* .App-header {
   background-color: var(--background-colour);
   min-height: 100vh;
   display: flex;
@@ -193,9 +201,9 @@ img{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: var(--text-color);
-}
+} */
 
-.App-link {
+/* .App-link {
   color: var(--data-color);
 }
 
@@ -206,4 +214,4 @@ img{
   to {
     transform: rotate(360deg);
   }
-}
+} */
