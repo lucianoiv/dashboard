@@ -2,7 +2,6 @@ import React from 'react'
 import { Chart as ChartJS} from 'chart.js/auto'; //importar auto para que funcione
 import { Line } from 'react-chartjs-2';
 
-
 export const HourTemp = ({weather}) => {
 
 const hourly_temp = weather.hourly.temperature_2m; //array de temperatura
