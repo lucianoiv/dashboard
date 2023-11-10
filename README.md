@@ -2,6 +2,46 @@
 
 ENTREGA FINAL <br> [https://lucianoiv.github.io/dashboard/](https://lucianoiv.github.io/dashboard/)<br>
 
+
+# Entrega Final 9/11/2023
+
+Despues de varias semanas de cursada hago entrega del trabajo final del curso **Front-End de Sitio Web Usando API** propuesto por [Argentina Programa 4.0](https://www.argentina.gob.ar/economia/conocimiento/argentina-programa) y dictado por alumnos y docentes de la [Facultad de Matemática, Astronomía, Física y Computación](https://www.argentina.gob.ar/economia/conocimiento/argentina-programa).
+En dicho trayecto trabajamos con React y creamos un Dashboard del Clima consumiendo datos de una [API del clima](https://open-meteo.com/en/docs) y una [API de transporte](https://api-transporte.buenosaires.gob.ar/) con Leaflet para mostrar el mapa.
+<br>
+El Dashboard se divide en dos partes, 50% para mostrar datos del clima y 50% para mostrar datos de Transporte.
+Una de las opciones era buscar la ciudad dinamicamente para que devuelva los datos de una ciudad especifica.<br>
+En mi APP encontramos, en primer lugar, el input para ingresar el nombre de la ciudad, y despues elegimos el país, ya que en algunos casos la ciudad no coincide con el país que buscamos.<br>
+<br>
+![alt text](./src/img/elegir%20ciudad.JPG)
+<br><br>
+Una vez que elegimos la ciudad pasamos a la siguiente vista de la APP donde encontramos las dos partes, transporte y clima.<br>
+En la parte del clima se puede observar:<br>
+- Fecha.
+- Hora.
+- Ciudad y País.
+- Temperatura Actual.
+- Minima y Maxima del día.
+- Temperatura por hora.
+- UV.
+- Viento.
+- Probabilidad de LLuvia.
+- Calidad del Aire.
+- Horario de Amanecer y anochecer.
+<br><br>
+![alt text](./src/img/dashboard%20dia.JPG)
+<br><br>
+El Dashboard tambien cambia el fondo en el caso de que sea de noche en la ciudad elegida. Y tiene un boton arriba a la izquierda donde se puede volver a la primer página para cambiar la ciudad.
+<br><br>
+![alt text](./src/img/dashboard%20noche.JPG)
+<br><br>
+En cuanto al mapa, se puede elgir en nombre de la linea para mostrar donde estan ubicadas las unidades en tiempo real.<br>
+![alt text](./src/img/transporte.JPG)
+**Para mejorar:**
+- no tuve el tiempo necesario para hacer un superselect de acuerdo a las lineas.
+- No logré hacer el centrado y/o zoom de la ubicación.
+- Ya que se pueden elegir ciudades del mundo, me falto hacer un boton donde solo muestre el mapa cuando la ciudad sea buenos aires.
+- Actualizar posicion cada 30 segundos.
+___
 ## Actualizacion 3/11
 
 Pude solucionar el error al no encontrarse disponible el servidor. Ahora si no encuentra datos o la API no devuelve datos, la app no crashea. El dropdown esta listo, falta el detall de borrar los numeros que se repiten. Sigo encontrando un error ocasional 

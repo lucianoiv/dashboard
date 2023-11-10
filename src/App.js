@@ -100,18 +100,18 @@ function App() {
             {/* <p>previsualizar</p> */}
             {submit === "" ? (
               <>
-                <label htmlFor="selectCiudad">CARGANDO...</label>
+                <label htmlFor="selectCiudad"></label>
 
                 <select id="selectCiudad">
-                  <option value="{e.id}">CARGANDO...</option>
+                  <option>CARGANDO...</option>
                 </select>
               </>
             ) : (
               <>
-                <label htmlFor="selectCiudad">ELEGIR PAIS</label>
+                <label htmlFor="selectCiudad"></label>
 
                 <select id="selectCiudad" onChange={Elegir}>
-                  <option value="">Elegir Pais</option>
+                  <option value="">Elegir País</option>
                   {fetchCiudad.map((e) => (
                     <option value={e.name}>{e.country}</option>
                   ))}

@@ -8,6 +8,7 @@
 
 html {
   background-color: var(--background-colour);
+  
 }
 
 * {
@@ -23,6 +24,10 @@ html {
 }
 
 .ciudad {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200%;
+  background-image: url('https://images.ctfassets.net/hrltx12pl8hq/6TIZLa1AKeBel0yVO7ReIn/1fc0e2fd9fcc6d66b3cc733aa2547e11/weather-images.jpg');
   align-content: stretch;
   display: grid;
   grid-template-columns: 0.5fr 0.5fr 0.5fr;
@@ -162,8 +167,10 @@ img {
 }
 
 #mode1 {
-  background-image: url("https://scopeblog.stanford.edu/wp-content/uploads/2022/07/AdobeStock_268489083-scaled.jpeg");
+  background-image: url("https://as2.ftcdn.net/v2/jpg/03/13/89/81/1000_F_313898173_HZ9ZUCsWOkqkao7fXdm7D7QBtEmCdf8l.jpg");
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #mode0 {
